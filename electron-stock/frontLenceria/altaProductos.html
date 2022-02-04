@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Sistema de Ventas y Stock</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="estilos.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <script src="plantillaJS.js"></script>
+</head>
+
+<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<body id ="color1" >
+<div class="container-fluid">
+  <div class="row content">
+    <!----------------------------------------------------------------- Barra de navegacion lateral ----------------------------------------------------------->
+    <div style="background-color: #2583db;" class="col-sm-2 sidenav hidden-xs">
+      <br>
+      <h4 style="color: white;">Sistema Lenceria</h4>
+      <hr>
+      <ul  class="nav nav-pills nav-stacked">
+
+
+
+        
+        <li><a id="hoverSideVar"  href="#"><i style="margin-right:10px" class="fas fa-home"></i>Inicio</a></li>
+
+        <li><a    id="hoverSideVar"  href="#"><i style="margin-right:10px" class="fas fa-chart-bar"></i>Stock</a></li>
+        <div  id="demo6" >
+
+          <li id="hoverSideVar3" ><a id="hoverSideVar2"   id="hoverSideVar" href="#"><i style="margin-right:10px" class="fas fa-shopping-bag"></i>Administrar Artículos</a></li>
+          <div id="demo" >
+            <ul>
+              <li id="hoverSideVar3" ><a id="hoverSideVar2" href="/frontLenceria/altaProducto.html">Artículos</a></li>
+              <!-- <li id="hoverSideVar2" ><a id="hoverSideVar2" href="/frontLenceria/bajaModificacionProducto.html">Update/Delete</a></li> -->
+              <li id="hoverSideVar3" style="margin-bottom: 15px;"><a  id="hoverSideVar2" href="/frontLenceria/categoria.html" >Categoria</a></li>
+            
+            </ul>
+          </div>
+  
+          <li id="hoverSideVar3"><a id="hoverSideVar2"   id="hoverSideVar" href="#"><i style="margin-right:10px" class="fas fa-chart-bar"></i>Movimiento Stock</a></li>
+          <div id="demo3" >
+            <ul>
+              <li id="hoverSideVar3" ><a id="hoverSideVar2" href="/frontLenceria/ingresoStock.html">Ingreso</a></li>
+              <li id="hoverSideVar3" style="margin-bottom: 15px;" ><a id="hoverSideVar2" href="/frontLenceria/egresoStock.html">Egreso</a></li>
+              <li id="hoverSideVar3" style="margin-bottom: 15px;" ><a id="hoverSideVar2" href="/frontLenceria/talonario.html">Talonario</a></li>
+            </ul>
+          </div>
+          
+          
+  
+          
+          <li id="hoverSideVar3"><a id="hoverSideVar2"   id="hoverSideVar" href="#"><i style="margin-right:10px" class="far fa-clipboard"></i>Informes</a></li>
+          <div id="demo4" >
+            <ul>
+              <li id="hoverSideVar3" ><a id="hoverSideVar2" href="/frontLenceria/reporteIngreso.html">Reporte de Ingreso</a></li>
+              <li id="hoverSideVar3" style="margin-bottom: 15px;" ><a id="hoverSideVar2" href="/frontLenceria/ReporteEgreso.html">Reporte de Egreso</a></li>
+              <li id="hoverSideVar3" style="margin-bottom: 15px;" ><a id="hoverSideVar2" href="#">Reporte de Saldos</a></li>
+            </ul>
+          </div>
+        </div>
+
+
+      </ul><br>
+    </div>
+
+
+    <!------------------------------------------------------------- Fin Barra de navegacion lateral ------------------------------------------------------------->
+
+    <br>
+
+     <div  class="col-sm-8">
+
+            <!--------------------------------------------------------- Barra de navegación superior  ----------------------------------------------------------->
+        
+            <nav id="sombras" style="background-color: #2583db;" class="navbar navbar-primary">
+              <div   class="container-fluid">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                  <form  class="navbar-form navbar-left" action="/action_page.php">
+                      <div  class="form-group">
+                        <input   type="text" class="form-control" placeholder="Buscar Producto">
+                      </div>
+                      <button type="submit" class="btn btn-default">Buscar</button>
+                    </form>
+                  <ul class="nav navbar-nav navbar-right">
+                      <li class="dropdown">
+                          <a id="adminNavBar"  class="dropdown-toggle" data-toggle="dropdown" href=""><i style="margin-right:10px" class="fas fa-user-cog"></i>Usuario
+                          <span class="caret"></span></a>
+                          <ul class="dropdown-menu">
+                            <li><a href="#">Editar Usuario</a></li>
+                            <li><a href="#">Cerrar Sesión</a></li>
+                          </ul>
+                        </li>
+                      
+                  </ul>
+              </div>
+            </nav> 
+
+            <!--------------------------------------------------------- Fin Barra de navegación superior---------------------------------------------------------------------------->
+        
+      
+      <div class="row">
+        <div class="col-sm-4">
+
+          
+          <h2 style="font-weight:bold;margin-left:10px">Administrar Artículos</h2>
+          
+
+        </div>
+        <div class="col-sm-2">
+            
+        </div>
+        <div class="col-sm-6">
+          
+          
+
+        </div>
+        
+      </div>
+
+      <div style="margin-top:20px" class="row">
+        <div  class="col-sm-4">
+          <h5 style="font-weight:bold;margin-left:10px"><i style="margin-right:10px;margin-right:10px;margin-bottom:10px" class="fas fa-shopping-bag"></i>Carga de Artículos</h5>
+          
+
+          <div  id="scroll" >
+            <!----------------------------------------------------------------- Formulario Producto ----------------------------------------------------------->
+            
+            <form style="box-shadow: 5px 5px 5px rgb(100, 100, 100);background-color:#fff9f9;padding:5%;border:#c7c5c5;border-style: inset;"  id="form" class="form-horizontal form-fluid" action="/action_page.php" >
+
+              <div  class="form-group">
+                <label style="margin-right:20px"  class="control-label col-sm-2" for="pwd">Código:</label>
+                <div style="width: 200px;" class="col-sm-10">
+                  <input  type="number" class="form-control"  placeholder="Cod. de barra">
+                </div>
+              </div>
+              <div  class="form-group">
+                <label style="margin-right:20px"  class="control-label col-sm-2" for="email">Nombre:</label>
+                <div style="width: 200px;" class="col-sm-2">
+                  <input  type="text" class="form-control" id="email" placeholder="Nombre">
+                </div>
+              </div>
+              <div class="form-group">
+                <label style="margin-right:20px"  class="control-label col-sm-2" for="pwd">Precio Venta:</label>
+                <div style="width: 200px;" class="col-sm-10">
+                  <input type="number" class="form-control" id="pwd" placeholder="Precio Venta">
+                </div>
+              </div>
+
+
+                <div class="form-group">
+                  <label style="margin-right: 35px;" class="control-label col-sm-2" for="email">Categoria:</label>
+                  <input style="width: 150px;"  class="col-sm-4" type="text" class="form-control">
+                  <span class="input-group-btn">
+                    <div class="input-group-btn">
+                      <button style="padding: 1%;box-shadow: 2px 2px 5px rgb(0, 0, 0);margin-left:10px;" type="button" class="btn  dropdown-toggle" data-toggle="dropdown" ><i style="margin-right:5px" class="faAct fas fa-pencil-alt"></i>Nuevo<span ></span>
+                      </button>
+              
+                      <ul style="padding:10%" class="dropdown-menu pull-right" role="menu">
+                        <li>
+                          
+
+                          <form style="background-color:#fff9f9;padding:5%;"  id="form" class="form-horizontal form-fluid" action="/action_page.php" >
+
+                            <div  class="form-group">
+                              <label style="margin-right:20px"  class="control-label col-sm-2" for="pwd">Código:</label>
+                              <div style="width: 200px;" class="col-sm-10">
+                                <input  type="number" class="form-control"  placeholder="Cod. de Categoría">
+                              </div>
+                            </div>
+                            <div  class="form-group">
+                              <label class="control-label col-sm-2" for="email">Descripción:</label>
+                              <div style="width: 200px;"  class="col-sm-10">
+                                  <input   type="text" class="form-control"  placeholder="Descripción">
+                              </div>
+                            </div>
+                           
+                            <center><button style="margin-top:20px;" type="button" class="btn btn-primary"><i style="margin-right:10px;" class="fas fa-check"></i>Agregar</button></center>
+                          </form> 
+
+
+
+                        </li>
+                        
+                      </ul>
+                    </div>
+                  </span>
+                </div>
+              
+              <center><button style="margin-top:20px;" type="button" class="btn btn-primary"><i style="margin-right:10px" class="fas fa-check"></i>Agregar</button></center>
+            </form> 
+          </div>
+
+            <!-------------------------------------------------------------------Fin Formulario Producto ------------------------------------------------------------>
+          
+
+
+            
+
+        </div>
+
+        <div class="col-sm-8">
+            <!----------------------------------------------------------------- Tabla Carrito ----------------------------------------------------------->
+          <h5 style="font-weight:bold;margin-left:10px"><i style="margin-right:10px;margin-right:10px;margin-bottom:10px" class="fas fa-shopping-bag"></i>Lista de Artículos</h5>
+
+          <div  id="scroll" >
+
+            <table  class="table table-bordered" data-offset="5" style="background-color:#fff9f9 ;border:#000000;border-style: inset;box-shadow: 5px 5px 5px rgb(100, 100, 100);">
+
+                  <thead id="thead" style="background-color: #97d8f7;border:#000000;border-style: inset;">
+                    <tr>
+                    <th><input id="checkTodo" type="checkbox" value=""  onclick="marcarDesmarcar(this);" ></th>
+                    <th>Código</th>
+                    <th>Descripción</th>
+                    <th>Precio</th>
+                    <th>Stock</th>
+                    <th>Categoria</th>
+                    <th>Estado</th>
+                    <th>Modificar</th>
+                    </tr>
+                </thead>
+                
+                  
+                    <tbody  >
+                      <tr id="obj1">
+                      <td><input type="checkbox" value=""></td> 
+                      <td>200025414</td>
+                      <td>corpiños</td>
+                      <td>500</td>
+                      <td>20</td>
+                      <td>Lenceria</td>
+                      <td>Habilitado</td> 
+                      <td><button style="margin-left:15px;box-shadow: 2px 2px 5px rgb(0, 0, 0);" style="margin-right:50px;" onclick="abrirVentanaActualizar()"><i  class="faAct fas fa-pencil-alt"></i></button></td>
+
+                      </tr>
+
+                      <tr id="obj1">
+                        <td><input type="checkbox" value=""></td> 
+                        <td>200025414</td>
+                        <td>corpiños</td>
+                        <td>500</td>
+                        <td>20</td>
+                        <td>Lenceria</td>
+                        <td>Habilitado</td> 
+                        <td><button style="margin-left:15px;box-shadow: 2px 2px 5px rgb(0, 0, 0);" style="margin-right:35px;" onclick="abrirVentanaActualizar()"><i  class="faAct fas fa-pencil-alt"></i></button></td>
+  
+                        </tr>
+
+                        <tr id="obj1">
+                          <td><input type="checkbox" value=""></td> 
+                          <td>200025414</td>
+                          <td>corpiños</td>
+                          <td>500</td>
+                          <td>20</td>
+                          <td>Lenceria</td>
+                          <td>inhabilitado</td> 
+                          <td><button style="margin-left:15px;box-shadow: 2px 2px 5px rgb(0, 0, 0);" style="margin-right:35px;" onclick="abrirVentanaActualizar()"><i  class="faAct  fas fa-pencil-alt"></i></button></td>
+    
+                          </tr>
+
+                          <tr id="obj1">
+                            <td><input type="checkbox" value=""></td> 
+                            <td>200025414</td>
+                            <td>corpiños</td>
+                            <td>500</td>
+                            <td>20</td>
+                            <td>Lenceria</td>
+                            <td>Habilitado</td> 
+                            <td><button style="margin-left:15px;box-shadow: 2px 2px 5px rgb(0, 0, 0);" style="margin-right:35px;" onclick="abrirVentanaActualizar()"><i  class="faAct  fas fa-pencil-alt"></i></button></td>
+      
+                            </tr>
+
+                            <tr id="obj1">
+                              <td><input type="checkbox" value=""></td> 
+                              <td>200025414</td>
+                              <td>corpiños</td>
+                              <td>500</td>
+                              <td>20</td>
+                              <td>Lenceria</td>
+                              <td>Habilitado</td> 
+                              <td><button style="margin-left:15px;box-shadow: 2px 2px 5px rgb(0, 0, 0);" style="margin-right:35px;" onclick="abrirVentanaActualizar()"><i  class="faAct  fas fa-pencil-alt"></i></button></td>
+        
+                              </tr>
+
+                              <tr id="obj1">
+                                <td><input type="checkbox" value=""></td> 
+                                <td>200025414</td>
+                                <td>corpiños</td>
+                                <td>500</td>
+                                <td>20</td>
+                                <td>Lenceria</td>
+                                <td>inhabilitado</td> 
+                                <td><button style="margin-left:15px;box-shadow: 2px 2px 5px rgb(0, 0, 0);" style="margin-right:35px;" onclick="abrirVentanaActualizar()"><i  class="faAct  fas fa-pencil-alt"></i></button></td>
+          
+                                </tr>
+
+                                <tr id="obj1">
+                                  <td><input type="checkbox" value=""></td> 
+                                  <td>200025414</td>
+                                  <td>corpiños</td>
+                                  <td>500</td>
+                                  <td>20</td>
+                                  <td>Lenceria</td>
+                                  <td>inhabilitado</td> 
+                                  <td><button style="margin-left:15px;box-shadow: 2px 2px 5px rgb(0, 0, 0);" style="margin-right:35px;" onclick="abrirVentanaActualizar()"><i  class="faAct  fas fa-pencil-alt"></i></button></td>
+                                  
+                                  </tr>
+
+                                  <tr id="obj1">
+                                    <td><input type="checkbox" value=""></td> 
+                                    <td>200025414</td>
+                                    <td>corpiños</td>
+                                    <td>500</td>
+                                    <td>20</td>
+                                    <td>Lenceria</td>
+                                    <td>Habilitado</td> 
+                                    <td><button style="margin-left:15px;box-shadow: 2px 2px 5px rgb(0, 0, 0);" style="margin-right:35px;" onclick="abrirVentanaActualizar()"><i  class="faAct  fas fa-pencil-alt"></i></button></td>
+                                    
+                                    </tr>
+
+                      
+                      
+                      
+                  </tbody>
+
+                
+                
+            </table>
+
+          </div>    
+            
+          
+            <button style="display:none;background-color:#3c73eb;margin-top:20px;margin-left:15px" id="elim" type="button" class="btn btn-primary"><i style="margin-right:10px" class="fas fa-pencil-alt" onclick="eliminarSeleccion()" ></i>Modificar Estado</button>
+            
+            
+          
+  
+
+            <!--------------------------------------------------------------------- Fin Tabla Carrito ------------------------------------------------------------------------------->
+
+          
+          
+        </div>
+        
+      </div>
+
+      <div class="row">
+        <div class="col-sm-4">
+
+          
+
+        </div>
+        
+        <div class="col-sm-2">
+          
+        </div>
+        <div class="col-sm-2">
+          
+          <div class="col-sm-4">
+            
+          </div>
+
+        </div>
+        
+      </div>
+
+      <div class="row">
+        <div class="col-sm-4">
+          <div style="background-color:#e4e1e1 ;" class="well"></div>
+
+        </div>
+        <div class="col-sm-4">
+          <div style="background-color:#e4e1e1 ;" class="well"></div>
+
+
+        </div>
+        <div class="col-sm-4">
+          <div style="background-color:#e4e1e1 ;" class="well"></div>
+
+          
+        </div>
+        
+      </div>
+      <div class="row">
+        <div class="col-sm-8">
+          
+
+          <!----------------------------------------------------------------- Modal ----------------------------------------------------------->
+
+          <div id="ventanaModal2" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+              <!-- Contenido del Modal ---------------------------------------------------------------------------------------------------------->
+
+              <div style="margin-top: 200px;" class="modal-content text-center ">
+                <div  class="modal-header">
+                  <button id="cerrar" type="button" class="close" data-dismiss="modal" onclick="cerrarVentana2()">&times;</button>
+                  <h4 class="modal-title">Modificar Artículo</h4>
+                </div>
+                <div class="modal-body">
+
+                  <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Modificar Precio de Venta
+                    <span class="caret"></span></button>
+                    <ul style="margin-left: 120px;" class="dropdown-menu">
+                      <div style="margin-top: 20px;" class="form-group">
+                        <label style="margin-right:20px"  class="control-label col-sm-2" for="pwd">Precio Venta:</label>
+                        <div style="width: 200px;" class="col-sm-10">
+                          <input type="number" class="form-control" id="pwd" placeholder="Precio">
+                          <center><button style="margin-top: 20px;" type="button" class="btn btn-success"><i style="margin-right:10px;" class="fas fa-pencil-alt"></i>Actualizar</button></center>
+                        </div>
+                      </div>
+                    </ul>
+                  </div> 
+
+                  <div style="margin-top: 20px;" class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Modificar Artículo
+                    <span class="caret"></span></button>
+                    <ul style="margin-left: 120px;" class="dropdown-menu">
+
+                      <form style="background-color:#fff9f9;padding:5%"  id="form" class="form-horizontal form-fluid" action="/action_page.php" class="well">
+
+                        <div  class="form-group">
+                          <label style="margin-right:25px"  class="control-label col-sm-2" for="pwd">Código:</label>
+                          <div style="width: 200px;" class="col-sm-10">
+                            <input  type="number" class="form-control"  placeholder="Cod. de barra">
+                          </div>
+                        </div>
+                        <div  class="form-group">
+                          <label style="margin-right:25px"  class="control-label col-sm-2" for="email">Nombre:</label>
+                          <div style="width: 200px;" class="col-sm-2">
+                            <input  type="text" class="form-control" id="email" placeholder="Nombre">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label style="margin-right:25px"  class="control-label col-sm-2" for="pwd">Precio Venta:</label>
+                          <div style="width: 200px;" class="col-sm-10">
+                            <input type="number" class="form-control" id="pwd" placeholder="Precio">
+                          </div>
+                        </div>
+                       
+                        <div class="form-group">
+                          <label style="margin-right:40px" class="control-label col-sm-2" for="sel1">Categoria:</label>
+                          <select type="text" style="width: 200px;" class="form-control" id="sel1">
+                            <option hidden selected>Selecciona una opción</option>
+                            <option>corpiños</option>
+                            <option>medias</option>
+                            <option>Cinturonga</option>
+                            <option>Varios</option>
+                          </select>
+                        </div> 
+                        <center><button type="button" class="btn btn-success"><i style="margin-right:10px" class="fas fa-pencil-alt"></i>Actualizar</button></center>
+                      </form> 
+
+                    </ul>
+                  </div> 
+
+                  <div class="dropdown">
+                    <button style="margin-top: 20px;" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Modificar Estado
+                    <span class="caret"></span></button>
+                    <ul style="margin-left: 120px;" class="dropdown-menu">
+
+
+                      <form style="box-shadow: 5px 5px 5px rgb(100, 100, 100);background-color:#fff9f9;padding:5%;border:#c7c5c5;border-style: inset;"  id="form" class="form-horizontal form-fluid" action="/action_page.php" class="well">
+                      <div style="margin-top: 20px;" class="form-group">
+                        <label style="margin-right:40px"  class="control-label col-sm-2" for="pwd">Habilitado:</label>
+                        <div style="width: 200px;" class="col-sm-6">
+                          <input style="margin-top:10px" type="checkbox" value="">
+                        </div>
+                      </div>
+
+                      <div style="margin-top: 20px;" class="form-group">
+                        <label style="margin-right:40px"  class="control-label col-sm-2" for="pwd">Inhabilitado:</label>
+                        <div style="width: 200px;" class="col-sm-6">
+                          <input style="margin-top:10px" type="checkbox" value="">
+                        </div>
+                      </div>
+
+                      <center><button style="margin-top: 20px;" type="button" class="btn btn-success"><i style="margin-right:10px;" class="fas fa-pencil-alt"></i>Actualizar</button></center>
+
+                    </form>
+
+                    </ul>
+                  </div> 
+                  
+                </div>
+                <div class="modal-footer">
+                  <button  id="cerrar" type="button" class="btn btn-default" data-dismiss="modal" onclick="cerrarVentana2()" >Cerrar</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- ---------------------------------------------------------------- Fin Modal----------------------------------------------------------------------------- -->
+
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ------------------------------------------------------------Footer----------------------------------------------------------------------- -->
+
+<footer>
+
+  <div class="text-center" >
+    <h5 style="background-color:#8ec0f0 ;padding:5px;">Sistema Lenceria- Todos los Derechos Reservados - 2022</h5>
+  </div>
+</footer>
+
+<!-- ----------------------------------------------------------- Fin Footer ----------------------------------------------------------------------- -->
+
+</body>
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------- -->
+</html>

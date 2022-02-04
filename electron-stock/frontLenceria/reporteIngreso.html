@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Sistema de Ventas y Stock</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="estilos.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <script src="plantillaJS.js"></script>
+
+
+</head>
+<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<body id ="color1" >
+<div class="container-fluid">
+  <div class="row content">
+    <!----------------------------------------------------------------- Barra de navegacion lateral ----------------------------------------------------------->
+    <div style="background-color: #2583db;" class="col-sm-2 sidenav hidden-xs">
+      <br>
+      <h4 style="color: white;">Sistema Lenceria</h4>
+      <hr>
+      <ul  class="nav nav-pills nav-stacked">
+
+
+
+        
+        <li><a id="hoverSideVar"  href="#"><i style="margin-right:10px" class="fas fa-home"></i>Inicio</a></li>
+
+        <li><a    id="hoverSideVar"  href="#"><i style="margin-right:10px" class="fas fa-chart-bar"></i>Stock</a></li>
+        <div  id="demo6" >
+
+          <li id="hoverSideVar3" ><a id="hoverSideVar2"   id="hoverSideVar" href="#"><i style="margin-right:10px" class="fas fa-shopping-bag"></i>Administrar Artículos</a></li>
+          <div id="demo" >
+            <ul>
+              <li id="hoverSideVar3" ><a id="hoverSideVar2" href="/frontLenceria/altaProducto.html">Artículos</a></li>
+              <!-- <li id="hoverSideVar2" ><a id="hoverSideVar2" href="/frontLenceria/bajaModificacionProducto.html">Update/Delete</a></li> -->
+              <li id="hoverSideVar3" style="margin-bottom: 15px;"><a  id="hoverSideVar2" href="/frontLenceria/categoria.html" >Categoria</a></li>
+            
+            </ul>
+          </div>
+  
+          <li id="hoverSideVar3"><a id="hoverSideVar2"   id="hoverSideVar" href="#"><i style="margin-right:10px" class="fas fa-chart-bar"></i>Movimiento Stock</a></li>
+          <div id="demo3" >
+            <ul>
+              <li id="hoverSideVar3" ><a id="hoverSideVar2" href="/frontLenceria/ingresoStock.html">Ingreso</a></li>
+              <li id="hoverSideVar3" style="margin-bottom: 15px;" ><a id="hoverSideVar2" href="/frontLenceria/egresoStock.html">Egreso</a></li>
+              <li id="hoverSideVar3" style="margin-bottom: 15px;" ><a id="hoverSideVar2" href="/frontLenceria/talonario.html">Talonario</a></li>
+            </ul>
+          </div>
+          
+          
+  
+          
+          <li id="hoverSideVar3"><a id="hoverSideVar2"   id="hoverSideVar" href="#"><i style="margin-right:10px" class="far fa-clipboard"></i>Informes</a></li>
+          <div id="demo4" >
+            <ul>
+              <li id="hoverSideVar3" ><a id="hoverSideVar2" href="/frontLenceria/reporteIngreso.html">Reporte de Ingreso</a></li>
+              <li id="hoverSideVar3" style="margin-bottom: 15px;" ><a id="hoverSideVar2" href="/frontLenceria/reporteEgreso.html">Reporte de Egreso</a></li>
+              <li id="hoverSideVar3" style="margin-bottom: 15px;" ><a id="hoverSideVar2" href="#">Reporte de Saldos</a></li>
+            </ul>
+          </div>
+        </div>
+
+
+      </ul><br>
+    </div>
+
+    <!------------------------------------------------------------- Fin Barra de navegacion lateral ------------------------------------------------------------->
+
+    <br>
+
+     <div  class="col-sm-8">
+
+            <!--------------------------------------------------------- Barra de navegación superior  ----------------------------------------------------------->
+        
+            <nav id="sombras" style="background-color: #2583db;" class="navbar navbar-primary">
+              <div   class="container-fluid">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                  
+                  <ul class="nav navbar-nav navbar-right">
+                      <li class="dropdown">
+                          <a id="adminNavBar"  class="dropdown-toggle" data-toggle="dropdown" href=""><i style="margin-right:10px" class="fas fa-user-cog"></i>Usuario
+                          <span class="caret"></span></a>
+                          <ul class="dropdown-menu">
+                            <li><a href="#">Editar Usuario</a></li>
+                            <li><a href="#">Cerrar Sesión</a></li>
+                          </ul>
+                        </li>
+                      
+                  </ul>
+              </div>
+            </nav> 
+
+            <!--------------------------------------------------------- Fin Barra de navegación superior---------------------------------------------------------------------------->
+        
+      
+      <div class="row">
+        <div class="col-sm-4">
+
+          
+          <h2 style="font-weight:bold;margin-left:10px">Reporte de Ingreso</h2>
+          
+          
+        </div>
+        <div class="col-sm-2">
+            
+        </div>
+        <div class="col-sm-6">
+          
+        </div>
+        
+      </div>
+
+      <div style="margin-top:20px" class="row">
+        <div  class="col-sm-4">
+
+          <h5 style="font-weight:bold;margin-left:10px"><i style="margin-right:10px;margin-right:10px;margin-bottom:10px" class="fas fa-cash-register"></i>Buscadores</h5>
+          
+          <div id="scroll" style="padding:2%;">
+
+
+            <!----------------------------------------------------------------- Buscadores ----------------------------------------------------------->
+            
+            <form  style="box-shadow: 5px 5px 5px rgb(100, 100, 100);padding:2%;background-color:white;" action="/action_page.php">
+              <div  class="form-group">
+                <label style="margin-top:5px;margin-right:15px"  class="control-label col-sm-2" for="pwd">Desde:</label>
+                <input style="width:200px"   type="date" class="form-control" placeholder="Buscar Producto">
+              </div>
+              <div  class="form-group">
+                <label style="margin-top:5px;margin-right:15px"  class="control-label col-sm-2" for="pwd">Hasta:</label>
+                <input style="width:200px"   type="date" class="form-control" placeholder="Buscar Producto">
+              </div>
+              <center><button type="submit" class="btn btn-default">Buscar</button></center>
+            </form>
+  
+            <form  style="box-shadow: 5px 5px 5px rgb(100, 100, 100);padding:2%;background-color:white;margin-top:25px" action="/action_page.php">
+              <div  class="form-group">
+                <center><input style="width: 200px;"  type="text" class="form-control" placeholder="Buscar Por ID de Remito"></center>
+              </div>
+              <center><button type="submit" class="btn btn-default">Buscar</button></center>
+          </form>
+
+                
+        </div>
+
+            <!-------------------------------------------------------------------Fin Buscadores ------------------------------------------------------------>
+          </div>
+
+
+
+        <div class="col-sm-8">
+
+
+          <h5 style="font-weight:bold;margin-left:10px"><i style="margin-right:10px;margin-right:10px;margin-bottom:10px" class="fas fa-cash-register"></i>Lista de Ingresos</h5>
+          
+          <div id="scroll" >
+
+
+            <!----------------------------------------------------------------- Tabla Lista de ingresos ----------------------------------------------------------->
+            
+            <table  class="table table-bordered"   style="background-color:#fff9f9 ;border:#000000;border-style: inset; box-shadow: 5px 5px 5px rgb(100, 100, 100);">
+              <thead id="thead" style="background-color: #97d8f7;border:#000000;border-style: inset;">
+                <tr>
+                  <th>Código</th>
+                  <th>Fecha</th>
+                  <th>Total</th>
+                  <th>Ver Detalles</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>00457</td>
+                  <td>20/12/2021</td>
+                  <td>200</td>
+                  
+                  <td><button style="margin-left: 50px;box-shadow: 2px 2px 5px rgb(0, 0, 0);"   onclick="abrirVentana()"><i   class=" faAct fas fa-eye"></i></button></td>
+                </tr>
+                <tr>
+                  <td>00457</td>
+                  <td>20/12/2021</td>
+                  <td>200</td>
+                  
+                  <td><button style="margin-left: 50px;box-shadow: 2px 2px 5px rgb(0, 0, 0);"  onclick="abrirVentana()"><i class="faAct fas fa-eye"></i></button></td>
+                </tr>
+                <tr>
+                  <td>00457</td>
+                  <td>20/12/2021</td>
+                  <td>200</td>
+                  
+                  <td><button style="margin-left: 50px;box-shadow: 2px 2px 5px rgb(0, 0, 0);"  onclick="abrirVentana()"><i class="faAct fas fa-eye"></i></button></td>
+                </tr>
+              </tbody>
+            </table>
+
+                
+        </div>
+           
+
+            <!--------------------------------------------------------------------- Fin Tabla Carrito ------------------------------------------------------------------------------->
+
+          
+           
+        </div>
+        
+      </div>
+
+      <div class="row">
+        <div class="col-sm-4">
+
+          
+
+        </div>
+        
+        <div class="col-sm-2">
+          
+        </div>
+        <div class="col-sm-2">
+          
+          <div class="col-sm-4">
+            
+          </div>
+
+        </div>
+        
+      </div>
+
+      <div class="row">
+        <div class="col-sm-4">
+          <div style="background-color:#e4e1e1 ;" class="well"></div>
+
+        </div>
+        <div class="col-sm-4">
+          <div style="background-color:#e4e1e1 ;" class="well"></div>
+
+
+        </div>
+        <div class="col-sm-4">
+          <div style="background-color:#e4e1e1 ;" class="well"></div>
+
+          
+        </div>
+        
+      </div>
+      <div class="row">
+        <div class="col-sm-8">
+          
+
+          <!----------------------------------------------------------------- Modal ----------------------------------------------------------->
+
+          <div id="ventanaModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+              <!-- Contenido del Modal ---------------------------------------------------------------------------------------------------------->
+
+              <div style="margin-top: 200px;" class="modal-content text-center ">
+                <div  class="modal-header">
+                  <button id="cerrar" type="button" class="close" data-dismiss="modal" onclick="cerrarVentana()">&times;</button>
+                  <h4 class="modal-title">Detalle de Remito</h4>
+                </div>
+                <div class="modal-body">
+                    <h2 style="font-size:50px;margin-bottom:20px;margin-right:600px">Remito</h2>
+                    <h3 style="font-size:15px;margin-right:460px;font-weight: bold;">N°. de Remito:</h3>    
+                    <h3 style="font-size:15px;margin-right:518px;margin-top:5px;margin-bottom:25px;font-weight: bold;">Fecha:</h3>         
+                    <table class="table table-bordered" >
+                      <thead style="background-color: #97d8f7;border:#000000;border-style: inset;">
+                        <tr>
+                          <th>Cantidad</th>
+                          <th>Descripción</th>
+                          <th>Precio Unitario Compra</th>
+                          <th>Importe</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>10</td>
+                          <td>Corpiños</td>
+                          <td>200</td>
+                          <td>200</td>
+                        </tr>
+            
+                        <tr>
+                            <td>10</td>
+                            <td>Corpiños</td>
+                            <td>200</td>
+                            <td>200</td>
+                        </tr>
+            
+                        <tr>
+                            <td>10</td>
+                            <td>Corpiños</td>
+                            <td>200</td>
+                            <td>200</td>
+                          </tr>
+
+                          <tr>
+                            <td>10</td>
+                            <td>Corpiños</td>
+                            <td>200</td>
+                            <td>200</td>
+                          </tr>
+
+                          <tr>
+                            <td>10</td>
+                            <td>Corpiños</td>
+                            <td>200</td>
+                            <td>200</td>
+                          </tr>
+                        
+                          <tr>
+                            <td>10</td>
+                            <td>Corpiños</td>
+                            <td>200</td>
+                            <td>200</td>
+                          </tr>
+
+                        
+                        <tr >
+            
+                            <td  ></td>
+                            <td></td>
+                            <td style="font-weight: bold;">Subtotal:</td>
+                            <td>12000</td>
+               
+             
+             
+                        </td>  
+                          
+                        <tr >
+            
+                            <td  ></td>
+                            <td></td>
+                            <td style="font-weight: bold;background-color: #97d8f7">Total:</td>
+                            <td style="background-color: #97d8f7">12000</td>
+
+                        </tr>
+                        
+                      </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                  <button id="cerrar" type="button" class="btn btn-default" data-dismiss="modal" onclick="cerrarVentana()" >Cerrar</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- ---------------------------------------------------------------- Fin Modal----------------------------------------------------------------------------- -->
+
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ------------------------------------------------------------Footer----------------------------------------------------------------------- -->
+
+<footer>
+
+  <div class="text-center" >
+    <h5 style="background-color:#8ec0f0 ;padding:5px;">Sistema Lenceria - Todos los Derechos Reservados - 2022</h5>
+  </div>
+</footer>
+
+<!-- ----------------------------------------------------------- Fin Footer ----------------------------------------------------------------------- -->
+
+</body>
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------- -->
+</html>

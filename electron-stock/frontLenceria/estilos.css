@@ -1,0 +1,177 @@
+
+    /* Estilos de la vista Actualizacion Stock*/
+
+    .row.content {height: 550px}
+    
+
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 150%;
+    }
+
+
+
+    @media screen and (max-width: 767px) {
+      .row.content {height: auto;} 
+    }
+
+    #scroll {
+
+    height: 400px;
+    overflow-y: scroll;
+    overflow-x: scroll;
+    padding: 0%;
+    
+    display: flexbox;
+ }
+
+ #scroll2 {
+
+  height: 300px;
+  overflow-y: scroll;
+  overflow-x: scroll;
+  
+  display: flexbox;
+}
+
+.faAct {
+  color : rgb(65, 163, 62);
+}
+
+.faElim {
+  color : rgb(175, 36, 36);
+}
+
+#btnActualizar
+{
+  margin-left:20px;
+  box-shadow: 2px 2px 5px rgb(0, 0, 0);
+  
+
+}
+
+#btnActualizar:hover
+{
+  background-color: #d3dbd6;
+}
+
+#btnBaja
+{
+ 
+  box-shadow: 2px 2px 5px rgb(0, 0, 0);
+  
+
+}
+
+#btnBaja:hover
+{
+  background-color: #d3dbd6;
+}
+
+
+    #color1
+    {
+      background-color: #e4e1e1;
+    }
+
+    #navTopText
+    {
+      color: white;
+      
+    }
+
+    a:hover
+    {
+      background-color: #2583db;
+    }
+
+    #sombras
+    {
+      box-shadow: 5px 5px 5px rgb(100, 100, 100);
+      
+    }
+
+    .show
+    {
+      
+        transition: color 0.8s linear 0.2s;
+        background-color: rgba(0,0,0,0.4);    
+        opacity: 1;
+        pointer-events: auto;
+        
+
+    }
+
+    
+    .ocultar
+    {
+      
+      transition: color 0.8s linear 0.2s;
+      background-color: rgba(0,0,0,0.4);
+      opacity: 1;
+      pointer-events: auto;
+      
+
+    }
+
+    #hoverSideVar
+    {
+      color: white;
+      margin-top: 20px;
+      justify-content: left;
+    }
+
+    #hoverSideVar2
+    {
+      color: white;
+      margin-top: 15px;
+      text-decoration: none;
+    }
+
+    #hoverSideVar3
+    {
+      color: white;
+      margin-top: 15px;
+      margin-left: 30px;
+      text-decoration: none;
+    }
+
+    #hoverSideVar2:hover
+    {
+      color: #25517a;
+    }
+
+    #hoverSideVar:visited
+    {
+      background-color: rgb(14, 84, 189);
+    }
+
+    #hoverSideVar:visited:hover 
+    {
+      color: #d9dddf;
+      background-color: rgb(14, 84, 189);
+      
+    }
+
+    #adminNavBar
+    {
+      color: white;
+    }
+
+ 
+    #adminNavBar:visited
+    {
+      background-color: #2583db;
+    }
+
+   #adminNavBar:visited:hover 
+    {
+      color: #d9dddf;
+      background-color: #2583db;
+    }
+
+
+
+    /* --------------------------------------------------- */
+
+
